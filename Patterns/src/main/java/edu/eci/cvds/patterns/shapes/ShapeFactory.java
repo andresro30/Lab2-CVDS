@@ -2,8 +2,9 @@ package edu.eci.cvds.patterns.shapes;
 import edu.eci.cvds.patterns.shapes.concrete.*;
 
 public class ShapeFactory {
-	public Shape obtenerShape(String figura){
+	public static Shape create(RegularShapeType figura){
 		switch(figura){
+			
 			case Hexagon:
 			return new Hexagon();
 			case Pentagon:
@@ -12,10 +13,8 @@ public class ShapeFactory {
 			return new Quadrilateral();
 			case Triangle:
 			return new Triangle();
-			case 5:
-			return null;
-			
 		}
+		return null;
 	}
 	
 	
